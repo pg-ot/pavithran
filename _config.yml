@@ -1,0 +1,19 @@
+title: OT Security Field Notes
+description: Articles and practical perspectives on operational technology cybersecurity.
+author: Pavithran Ganesan
+url: "https://pg-ot.github.io"
+baseurl: "/pavithran"
+theme: minima
+markdown: kramdown
+permalink: /articles/:year/:month/:day/:title/
+timezone: Asia/Kolkata
+header_pages:
+  - index.md
+  - about.md
+plugins:
+  - jekyll-feed
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
