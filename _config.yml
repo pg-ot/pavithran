@@ -9,6 +9,8 @@ permalink: /articles/:year/:month/:day/:title/
 timezone: Asia/Kolkata
 header_pages:
   - index.md
+  - articles.md
+  - projects.md
   - about.md
 plugins:
   - jekyll-feed

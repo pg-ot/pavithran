@@ -1,0 +1,8 @@
+---
+layout: default
+---
+<section class="articles-section" id="articles"><div class="wrap"><div class="section-heading"><div><p class="eyebrow">THE JOURNAL</p><h2>Latest field notes<span>.</span></h2></div><span class="article-count">{{ site.posts.size }} {% if site.posts.size == 1 %}ARTICLE{% else %}ARTICLES{% endif %} / CONTINUALLY EXPLORING</span></div>
+{% for post in site.posts %}
+<article class="article-card"><div class="article-number">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}<span>FIELD NOTE</span></div><div class="article-details"><div class="article-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%d %b %Y' }}</time><span> / </span><span>{{ post.content | number_of_words | divided_by: 200 | plus: 1 }} MIN READ</span></div><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.description | default: post.excerpt | strip_html | truncate: 210 }}</p><div class="tags">{% for category in post.categories %}<span>{{ category | replace: '-', ' ' }}</span>{% endfor %}</div></div><a class="article-arrow" href="{{ post.url | relative_url }}" aria-label="Read {{ post.title | escape }}">↗</a></article>
+{% else %}<p>New field notes are on the way. Check back soon.</p>{% endfor %}
+</div></section>

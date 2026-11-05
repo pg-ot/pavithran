@@ -1,11 +1,20 @@
 ---
 layout: page
-title: About
+title: About me
 permalink: /about/
 ---
 
-I'm Pavithran Ganesan. OT Security Field Notes is my space for writing about operational technology cybersecurity.
+I'm **Pavithran Ganesan**. I write about operational technology cybersecurity and the engineering decisions that shape industrial systems.
 
-Topics include industrial network architecture, IEC 62443, segmentation, and risk assessment.
+This is my personal space for articles, practical perspectives, and future project notes. My writing explores how security principles translate into decisions on the plant floor.
 
-The aim is to connect security principles with the engineering decisions that shape industrial systems.
+## What I explore
+
+- **Industrial network architecture:** segmentation, zones, and the communication that connects them.
+- **Security in practice:** commissioning, validation, and the operational realities behind firewall policies.
+- **Long-term ownership:** maintaining security controls as systems and responsibilities change.
+- **IEC 62443:** connecting industrial security principles with engineering practice.
+
+## OT Security Field Notes
+
+The journal brings these perspectives together in longer-form articles. Start with [the articles]({{ '/articles/' | relative_url }}), or visit [Projects & Labs]({{ '/projects/' | relative_url }}) as the workbench develops.

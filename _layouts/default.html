@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="brand-mark" aria-hidden="true">PG<span>↗</span></span><span>PAVITHRAN GANESAN<small>OT SECURITY FIELD NOTES</small></span></a>
+    <nav aria-label="Main navigation"><a href="{{ '/' | relative_url }}" {% if page.layout == 'home' %}aria-current="page"{% endif %}>Home</a><a href="{{ '/articles/' | relative_url }}" {% if page.layout == 'articles' or page.layout == 'post' %}aria-current="page"{% endif %}>Articles</a><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}aria-current="page"{% endif %}>Projects</a><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}aria-current="page"{% endif %}>About</a></nav>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="site-footer wrap"><div><a href="{{ '/' | relative_url }}">OT Security Field Notes<span aria-hidden="true"> ↗</span></a><p>Security principles. Engineering realities.</p></div><p>© {{ 'now' | date: '%Y' }} {{ site.author | escape }}<br><span>Written with perspective. Published independently.</span></p></footer>
+</body>
+</html>
